@@ -57,6 +57,7 @@ pipeline{
             stages{
                 stage("Deploy to Dev"){
                     steps{
+						echo "I deployed to development"
                         //here run pipeline commit2dockerimage
                         //and ansibleRemoveApp
                         //ansibleStartApp
