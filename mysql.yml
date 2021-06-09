@@ -9,10 +9,7 @@
   tasks:
     - name: volume
       command: "docker volume create mysql-volume"
-
-    - name: network
-      command: "docker docker network create pf6-net"
-
+      
     - name: run
       command: "docker run --name=johnsql -p3306:3306 -v mysql-volume:/var/lib/mysql --net pf6-net -e MYSQL_ROOT_PASSWORD=root -d mysql:8"
 
