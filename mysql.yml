@@ -1,0 +1,17 @@
+---
+
+- name: run a command
+  hosts: project
+  become: true
+  gather_facts: no
+
+
+  tasks:
+    - name: volume
+      command: "docker volume create mysql-volume"
+
+    - name: run
+      command: "docker run --name=johnsql -p3306:3306 -v mysql-volume:/var/lib/mysql --net pf6-net -e MYSQL_ROOT_PASSWORD=root -d mysql:8"
+
+    - name: logs
+      command: "docker logs johnsql"
