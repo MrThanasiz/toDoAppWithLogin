@@ -11,4 +11,4 @@
       command: "docker run -p 80:8080 --net pf6-net --name pf6 othanasiz/pf6_app"
 
     - name: logs
-      command: "docker logs othanasiz/pf6_app:latest"
+      command: "docker logs pf6"
