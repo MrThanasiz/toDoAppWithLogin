@@ -7,5 +7,5 @@
 
 
   tasks:
-    - name: create docker network
+    - name: remove docker network
       command: "docker network rm pf6-net"
