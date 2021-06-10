@@ -8,4 +8,4 @@
 
   tasks:
     - name: docker run
-      command: "docker run -p 80:8080 -d --net pf6-net --name pf6 othanasiz/pf6_app:latest"
+      command: "docker run -p 80:8080 -d --net pf6-net --name pf6 othanasiz/pf6_app:dev"
